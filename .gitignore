@@ -1,9 +1,0 @@
-#ignore files in build and lib directories but ensure github pulls the empty directory
-build
-lib/*
-!lib/.gitkeep
-!lib/libcs680.a
-
-#ignore executables but ensure github pulls the empty directory
-bin/*
-!bin/.gitkeep
