@@ -1,25 +1,9 @@
-###########################################
-#IGNORE FILES WITHOUT EXTENSIONS
-#
-#THANKS TO Mad Physicist FROM STACKOVERFLOW
-###########################################
+#ignore files in build and lib directories but ensure github pulls the empty directory
+build
+lib/*
+!lib/.gitkeep
+!lib/libcs680.a
 
-#ignore everything
-
-*
-
-#unignore anything that is a directory
-
-!*/
-
-#unignore all files with extensions
-
-!*.*
-
-###########################################
-#IGNORE THESE EXTENSIONS
-###########################################
-
-#ignore object files
-
-*.o
+#ignore executables but ensure github pulls the empty directory
+bin/*
+!bin/.gitkeep
