@@ -2,7 +2,7 @@
 
 This is the result of a semester long project to create a software-based rendering engine for a Topics Course in Graphics.
 
-**Disclaimer:** For educational purposes only. While I may have typed out the code most of the algorithms were derived from OpenGL and Dr. Duffin. There isn't anything in here that you couldn't find a better example of anywhere else.
+**Disclaimer:** For educational purposes only. While I may have typed out the code most of the algorithms were derived from OpenGL and Dr. Duffin. There isn't anything in here that you couldn't find a better example of anywhere else. All the scenes located in the scenes directory were not created by me. Their purpose was to test our implementations of the rendering engine at various stages of its development cycle and should not be used anywhere else.
 
 ## Getting Started
 
