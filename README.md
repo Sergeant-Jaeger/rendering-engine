@@ -29,7 +29,7 @@ You'll need:
 
 * c++11 Standard Library (minimum)
 
-* libcs690.a This library lays the groundwork for communicating with the Xserver and it's necessary. It was created by Dr. Kirk Duffin at NIU.
+* libcs690.a This library lays the groundwork for communicating with the Xserver among other things and it's necessary so do not delete it. It was created by Dr. Kirk Duffin at NIU.
 
 * Xlib
 
