@@ -26,7 +26,7 @@ OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.$(OBJEXT))
 INCLUDES := -I $(INCLUDEDIR)
 
 #libraries
-LIB := -lX11 -L $(LIBDIR)
+LIB := -L $(LIBDIR) -lcs680 -lX11
 
 #flags
 CCFLAGS := -std=c++11 -g -Wall
