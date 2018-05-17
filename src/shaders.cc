@@ -1,5 +1,5 @@
-#include "shaders.h"
-#include "lighting.h"
+#include "Shaders.h"
+#include "Lighting.h"
 
 void matte(float color[3])
 {

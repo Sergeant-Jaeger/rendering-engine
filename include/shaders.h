@@ -1,7 +1,7 @@
 #ifndef SHADERS_H
 #define SHADERS_H
 
-#include "globals.h"
+#include "Globals.h"
 
 void matte(float color[3]);
 

@@ -1,4 +1,4 @@
-#include "pipelines.h"
+#include "Pipelines.h"
 #include <iostream>
 #include <iomanip>
 

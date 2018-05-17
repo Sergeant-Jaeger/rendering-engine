@@ -4,10 +4,18 @@
 #include <math.h>
 #include <vector>
 #include "rd_direct.h"
-#include "data_structures.h"
-#include "pipelines.h"
-#include "globals.h"
-#include "plot.h"
+#include "Point.h"
+#include "PointH.h"
+#include "PointA.h"
+#include "Vector3.h"
+#include "XForm.h"
+#include "LightA.h"
+#include "LightP.h"
+#include "LightF.h"
+#include "Edge.h"
+#include "Pipelines.h"
+#include "Globals.h"
+#include "Plot.h"
 
 using std::vector;
 

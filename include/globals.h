@@ -3,9 +3,17 @@
 
 #include <stack>
 #include <vector>
-#include "data_structures.h"
+#include "Point.h"
+#include "PointH.h"
+#include "PointA.h"
+#include "Vector3.h"
+#include "XForm.h"
+#include "LightA.h"
+#include "LightP.h"
+#include "LightF.h"
+#include "Edge.h"
 #include "rd_display.h"
-#include "shaders.h"
+#include "Shaders.h"
 
 using std::stack;
 using std::vector;
@@ -36,7 +44,7 @@ extern Point cam_eye;
 
 extern Point cam_at;
 
-extern Vector cam_up;
+extern Vector3 cam_up;
 
 extern double cam_fov;
 
@@ -84,9 +92,9 @@ extern bool vertex_t_flag;
 
 extern bool interpolation_flag;
 
-extern Vector viewing_vector;
+extern Vector3 viewing_vector;
 
-extern Vector polygon_normal;
+extern Vector3 polygon_normal;
 
 extern PointA surface_point_values;
 

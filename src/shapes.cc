@@ -1,4 +1,4 @@
-#include "shapes.h"
+#include "Shapes.h"
 
 void point_set(int nvertex, const float * vertex)
 {
@@ -307,7 +307,7 @@ void polygon_set(const float * vertex, int nface, const int * face)
 	PointH draw_vertex;
 	PointA avertex;
 	int l = 0;
-	vector<Vector> normal_vectors;
+	vector<Vector3> normal_vectors;
 
 	for (int i = 0; i < nface; i++)
 	{
@@ -319,7 +319,7 @@ void polygon_set(const float * vertex, int nface, const int * face)
 		for (int j = 0; j < 4; j++)
 			avertex[j] = initial_vertex[j];
 
-		normal_vectors.push_back(Vector(avertex[0], avertex[1], avertex[2]));
+		normal_vectors.push_back(Vector3(avertex[0], avertex[1], avertex[2]));
 
 		//line_pipeline(initial_vertex, "move");
 		polygon_pipeline(avertex, 1);
@@ -334,7 +334,7 @@ void polygon_set(const float * vertex, int nface, const int * face)
 			for (int j = 0; j < 4; j++)
 				avertex[j] = draw_vertex[j];
 
-			normal_vectors.push_back(Vector(avertex[0], avertex[1], avertex[2]));
+			normal_vectors.push_back(Vector3(avertex[0], avertex[1], avertex[2]));
 
 			//line_pipeline(draw_vertex, "draw");
 			if (face[l + 1] == -1)
@@ -523,10 +523,10 @@ void sphere(float radius, float zmin, float zmax, float thetamax)
 			polygon_pipeline(ap2, 1);
 			polygon_pipeline(ap3, 1);
 
-			Vector v1(p1[0], p1[1], p1[2]);
-			Vector v2(p2[0], p2[1], p2[2]);
-			Vector v3(p3[0], p3[1], p3[2]);
-			Vector v4(p4[0], p4[1], p4[2]);
+			Vector3 v1(p1[0], p1[1], p1[2]);
+			Vector3 v2(p2[0], p2[1], p2[2]);
+			Vector3 v3(p3[0], p3[1], p3[2]);
+			Vector3 v4(p4[0], p4[1], p4[2]);
 
 			polygon_normal = (v3 - v1).cross_product(v4 - v2);
 
@@ -595,10 +595,10 @@ void cone(float height, float radius, float thetamax)
 		polygon_pipeline(ap2, 1);
 		polygon_pipeline(atip2, 1);
 
-		Vector v1(ap1[0], ap1[1], ap1[2]);
-		Vector v2(ap2[0], ap2[1], ap2[2]);
-		Vector v3(atip2[0], atip2[1], atip2[2]);
-		Vector v4(atip1[0], atip1[1], atip1[2]);
+		Vector3 v1(ap1[0], ap1[1], ap1[2]);
+		Vector3 v2(ap2[0], ap2[1], ap2[2]);
+		Vector3 v3(atip2[0], atip2[1], atip2[2]);
+		Vector3 v4(atip1[0], atip1[1], atip1[2]);
 
 		polygon_normal = (v3 - v1).cross_product(v4 - v2);
 
@@ -671,10 +671,10 @@ void cylinder(float radius, float zmin, float zmax, float thetamax)
 		polygon_pipeline(a2min, 1);
 		polygon_pipeline(a2max, 1);
 
-		Vector v1(a1min[0], a1min[1], a1min[2]);
-		Vector v2(a2min[0], a2min[1], a2min[2]);
-		Vector v3(a2max[0], a2max[1], a2max[2]);
-		Vector v4(a1max[0], a1max[1], a1max[2]);
+		Vector3 v1(a1min[0], a1min[1], a1min[2]);
+		Vector3 v2(a2min[0], a2min[1], a2min[2]);
+		Vector3 v3(a2max[0], a2max[1], a2max[2]);
+		Vector3 v4(a1max[0], a1max[1], a1max[2]);
 
 		polygon_normal = (v3 - v1).cross_product(v4 - v2);
 
@@ -741,10 +741,10 @@ void disk(float height, float radius, float theta)
 		polygon_pipeline(ap2, 1);
 		polygon_pipeline(acenter2, 1);
 
-		Vector v1(ap1[0], ap1[1], ap1[2]);
-		Vector v2(ap2[0], ap2[1], ap2[2]);
-		Vector v3(acenter2[0], acenter2[1], acenter2[2]);
-		Vector v4(acenter1[0], acenter1[1], acenter1[2]);
+		Vector3 v1(ap1[0], ap1[1], ap1[2]);
+		Vector3 v2(ap2[0], ap2[1], ap2[2]);
+		Vector3 v3(acenter2[0], acenter2[1], acenter2[2]);
+		Vector3 v4(acenter1[0], acenter1[1], acenter1[2]);
 
 		polygon_normal = (v3 - v1).cross_product(v4 - v2);
 

@@ -1,4 +1,4 @@
-#include "lighting.h"
+#include "Lighting.h"
 
 //ambient
 //Ka * Ia *Cs
@@ -13,7 +13,7 @@ void ambient_lighting(float color[3])
 
 void diffuse_lighting(float color[3])
 {
-	Vector n, l;
+	Vector3 n, l;
 
 	float far_lights[3]{ 0, 0, 0 };
 	float point_lights[3]{ 0, 0, 0 };
@@ -78,7 +78,7 @@ void diffuse_lighting(float color[3])
 
 void specular_lighting(float color[3])
 {
-	Vector n, l, v, r;
+	Vector3 n, l, v, r;
 
 	float far_lights[3]{ 0, 0, 0 };
 	float point_lights[3]{ 0, 0, 0 };
@@ -170,13 +170,13 @@ void specular_lighting(float color[3])
 		color[i] += far_lights[i] + point_lights[i];
 }
 
-Vector compute_reflection_vector(Vector l, Vector n)
+Vector3 compute_reflection_vector(Vector3 l, Vector3 n)
 {
 	float nl_scalar = n.dot_product(l);
 
-	Vector n2(n[0], n[1], n[2]);
+	Vector3 n2(n[0], n[1], n[2]);
 
-	//Vector n2(n[0] / n.magnitude_squared(), n[1] / n.magnitude_squared(), n[2] / n.magnitude_squared());
+	//Vector3 n2(n[0] / n.magnitude_squared(), n[1] / n.magnitude_squared(), n[2] / n.magnitude_squared());
 
 	return ((2 * nl_scalar) * n2) - l;
 }

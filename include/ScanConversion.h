@@ -1,9 +1,17 @@
-#ifndef SCAN_CONVERSION_H
-#define SCAN_CONVERSION_H
+#ifndef SCANCONVERSION_H
+#define SCANCONVERSION_H
 
-#include "data_structures.h"
-#include "globals.h"
-#include "plot.h"
+#include "Point.h"
+#include "PointH.h"
+#include "PointA.h"
+#include "Vector3.h"
+#include "XForm.h"
+#include "LightA.h"
+#include "LightP.h"
+#include "LightF.h"
+#include "Edge.h"
+#include "Globals.h"
+#include "Plot.h"
 
 void scan_convert(PointA p[], int p_size);
 
@@ -23,4 +31,4 @@ void resort_AET(Edge * &AET);
 
 void fill_between_edges(int scanline, Edge * AET);
 
-#endif /*SCAN_CONVERSION_H*/
+#endif /*SCANCONVERSION_H*/

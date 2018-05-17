@@ -2,11 +2,19 @@
 #define PIPELINES_H
 
 #include <string>
-#include "data_structures.h"
-#include "globals.h"
-#include "plot.h"
-#include "clipping.h"
-#include "scan_conversion.h"
+#include "Point.h"
+#include "PointH.h"
+#include "PointA.h"
+#include "Vector3.h"
+#include "XForm.h"
+#include "LightA.h"
+#include "LightP.h"
+#include "LightF.h"
+#include "Edge.h"
+#include "Globals.h"
+#include "Plot.h"
+#include "Clipping.h"
+#include "ScanConversion.h"
 
 using std::string;
 

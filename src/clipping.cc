@@ -1,4 +1,4 @@
-#include "clipping.h"
+#include "Clipping.h"
 
 void line_clipping(PointH &p1, string flag)
 {

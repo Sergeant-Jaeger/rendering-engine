@@ -1,4 +1,4 @@
-#include "xforms.h"
+#include "Transformations.h"
 
 void translate_matrix(XForm &current, const double &tx, const double &ty, const double &tz)
 {
@@ -140,25 +140,25 @@ void inv_rotate_zx(XForm &normal, const double &theta)
 	normal = inv_rotated_xform;
 }
 
-XForm world_to_camera(const Point &eye, const Point &at, const Vector &up)
+XForm world_to_camera(const Point &eye, const Point &at, const Vector3 &up)
 {
 	XForm eye_xform;
 
 	eye_xform.eye_matrix(eye);
 
-	Vector a;
+	Vector3 a;
 
 	a = at - eye;
 
 	a.normalize();
 
-	Vector v;
+	Vector3 v;
 
 	v = a.cross_product(up);
 
 	v.normalize();
 
-	Vector u;
+	Vector3 u;
 
 	u = v.cross_product(a);
 

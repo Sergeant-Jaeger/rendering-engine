@@ -223,7 +223,7 @@ int REDirect::rd_camera_up(const float up[3])
 {
 	//cout << "rd_camera_up" << endl;
 
-	Vector new_up(up[0], up[1], up[2]);
+	Vector3 new_up(up[0], up[1], up[2]);
 
 	cam_up = new_up;
 
