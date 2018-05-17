@@ -1,4 +1,4 @@
-#include "globals.h"
+#include "Globals.h"
 #include <iostream>
 #include <iomanip>
 
@@ -30,7 +30,7 @@ Point cam_eye;
 
 Point cam_at(0, 0, -1);
 
-Vector cam_up(0, 1, 0);
+Vector3 cam_up(0, 1, 0);
 
 double cam_fov = 90.0;
 
@@ -76,9 +76,9 @@ bool vertex_t_flag = false;
 
 bool interpolation_flag = true;
 
-Vector viewing_vector;
+Vector3 viewing_vector;
 
-Vector polygon_normal;
+Vector3 polygon_normal;
 
 PointA surface_point_values;
 

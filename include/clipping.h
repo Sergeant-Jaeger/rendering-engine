@@ -3,9 +3,11 @@
 
 #include <string>
 #include <algorithm>
-#include "data_structures.h"
-#include "globals.h"
-#include "shapes.h"
+#include "PointA.h"
+#include "PointH.h"
+#include "Edge.h"
+#include "Globals.h"
+#include "Shapes.h"
 
 using std::min;
 using std::max;

@@ -1,4 +1,4 @@
-#include "scan_conversion.h"
+#include "ScanConversion.h"
 
 Edge* AET;
 

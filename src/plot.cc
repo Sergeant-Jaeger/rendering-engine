@@ -1,4 +1,4 @@
-#include "plot.h"
+#include "Plot.h"
 
 void pixel_plot(PointH &plot_pointh)
 {

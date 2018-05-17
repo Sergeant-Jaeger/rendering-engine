@@ -1,7 +1,9 @@
-#ifndef XFORMS_H
-#define XFORMS_H
+#ifndef TRANSFORMATIONS_H
+#define TRANSFORMATIONS_H
 
-#include "data_structures.h"
+#include "XForm.h"
+#include "Vector3.h"
+#include "Point.h"
 
 void translate_matrix(XForm &current, const double &tx, const double &ty, const double &tz);
 
@@ -23,10 +25,10 @@ void inv_rotate_yz(XForm &normal, const double &theta);
 
 void inv_rotate_zx(XForm &normal, const double &theta);
 
-XForm world_to_camera(const Point &eye, const Point &at, const Vector &up);
+XForm world_to_camera(const Point &eye, const Point &at, const Vector3 &up);
 
 XForm camera_to_clip(const double &fov, const double &near, const double &far, const double &aspect);
 
 XForm clip_to_device(const int &width, const int &height);
 
-#endif /*XFORMS_H*/
+#endif /*TRANSFORMATIONS_H*/
